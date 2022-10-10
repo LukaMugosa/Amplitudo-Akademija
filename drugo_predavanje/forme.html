@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Drugo Predavanje - Forme</title>
+</head>
+<body>
+    <form action="./index.php">
+        <table style="border: 3px solid black; border-collapse: collapse;">
+            <tr>
+                <th style="border: 3px solid black;">
+                    <label for="ime">Ime</label>
+                </th>
+                <td style="border: 3px solid black">
+                    <input type="text" id="ime" name="ime" autofocus required/>
+                </td>
+            </tr>
+            <tr>
+                <th style="border: 3px solid black;">
+                    <label for="prezime">Prezime</label>
+                </th>
+                <td style="border: 3px solid black">
+                    <input type="text" id="prezime" name="prezime" required/>
+                </td>
+            </tr>
+            <tr>
+                <th style="border: 3px solid black;">
+                    <label for="dob">Datum rodjenje</label>
+                </th>
+                <td style="border: 3px solid black">
+                    <input type="date" id="dob" required/>
+                </td>
+            </tr>
+            <tr>
+                <th style="border: 3px solid black;">
+                    <label for="checkbox">Punoljetan</label>
+                </th>
+                <td style="border: 3px solid black">
+                    <input type="checkbox" id="checkbox" required/>
+                </td>
+            </tr>
+            <tr>
+                <th style="border: 3px solid black;">
+                    <label for="color">Omiljena boja</label>
+                </th>
+                <td style="border: 3px solid black">
+                    <input type="color" id="color" required/>
+                </td>
+            </tr>
+            <tr>
+                <th style="border: 3px solid black;">
+                    <label for="file">CV</label>
+                </th>
+                <td style="border: 3px solid black">
+                    <input type="file" id="file" multiple required/>
+                </td>
+            </tr>
+            <tr>
+                <th style="border: 3px solid black;">
+                    <label for="num">Lucky number</label>
+                </th>
+                <td style="border: 3px solid black">
+                    <input type="number" id="num" step="0.001" min="5" max="10" required/>
+                </td>
+            </tr>
+            <tr>
+                <th style="border: 3px solid black;">
+                    <label for="num">Pol</label>
+                </th>
+                <td style="border: 3px solid black">
+                    <label>Muski</label>
+                    <input type="radio" value="muski" name="pol" required>
+                </td>
+                <td style="border: 3px solid black">
+                    <label>Zenski</label>
+                    <input type="radio" value="zenski" name="pol" required>
+                </td>
+            </tr>
+            <tr>
+                <th style="border: 3px solid black;">
+                    <label for="num">Broj telefona</label>
+                </th>
+                <td style="border: 3px solid black">
+                    <input type="tel" required/>
+                </td>
+            </tr>
+            <tr>
+                <th style="border: 3px solid black;">
+                    <label for="email">Email</label>
+                </th>
+                <td style="border: 3px solid black">
+                    <input type="email" id="email" required/>
+                </td>
+            </tr>
+            <tr>
+                <th style="border: 3px solid black;">
+                    <label for="time">Vrijeme</label>
+                </th>
+                <td style="border: 3px solid black">
+                    <input type="time" id="time" required/>
+                </td>
+            </tr>
+            <tr>
+                <th style="border: 3px solid black;">
+                    <label for="datetime">Datum i Vrijeme</label>
+                </th>
+                <td style="border: 3px solid black">
+                    <input type="datetime-local" id="datetime" required/>
+                </td>
+            </tr>
+            <tr>
+                <th style="border: 3px solid black;">
+                    <label for="password">Password</label>
+                </th>
+                <td style="border: 3px solid black">
+                    <input type="password" id="password" required/>
+                </td>
+            </tr>
+            <tr>
+                <th style="border: 3px solid black;">
+                    <label for="range">Range</label>
+                </th>
+                <td style="border: 3px solid black">
+                    <input type="range" id="range" required/>
+                </td>
+            </tr>
+            <tr>
+                <th style="border: 3px solid black;">
+                    <label for="url">Url</label>
+                </th>
+                <td style="border: 3px solid black">
+                    <input type="url" id="url" required/>
+                </td>
+            </tr>
+            <tr>
+                <td style="border: 3px solid black;">
+                    <input type="submit" value="Posalji" required>
+                </td>
+                <td style="border: 3px solid black;">
+                    <input type="reset" value="Ponisti" required>
+                </td>
+            </tr>
+            <tr>
+                <td style="border: 3px solid black;">
+                    <label for="poruka">Poruka</label>
+                </td>
+                <td style="border: 3px solid black;">
+                    <textarea name="poruka" id="poruka" cols="30" rows="10">
+
+                    </textarea>
+                </td>
+            </tr>
+            <tr>
+                <td style="border: 3px solid black;">
+                    <label for="poruka">Dugme</label>
+                </td>
+                <td style="border: 3px solid black;">
+                    <button>Klikni me!</button>
+                </td>
+            </tr>
+            <tr>
+                <td style="border: 3px solid black;">
+                    <label for="voce">Omiljeno voce</label>
+                </td>
+                <td style="border: 3px solid black;">
+                    <select name="voce" id="voce">
+                        <option value="select">Select</option>
+                        <option value="jabuka">Jabuka</option>
+                        <option value="banana">Banana</option>
+                        <option value="kruska">Kruska</option>
+                    </select>
+                </td>
+            </tr>
+
+        </table>
+    </form>
+</body>
+</html>
