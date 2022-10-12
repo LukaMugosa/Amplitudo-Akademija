@@ -1,0 +1,61 @@
+h3 {
+    color: blue;
+}
+
+.red-text {
+    color: red;
+}
+
+.green-text {
+    color: green;
+}
+
+h5 {
+    color: coral;
+}
+
+.klasa-za-h5 {
+    color: darkblue;
+}
+
+#hapet {
+    color: darkgoldenrod;
+}
+
+div p {
+    color: darkblue;
+}
+
+/* element unutar div elementa koji posjeduje #prviId za id ima gornju marginu 10px*/
+div #prviId {
+    margin-top: 10px;
+}
+
+.box {
+    width: 100px;
+    height: 50px;
+    border: 1px solid red;
+    background-color: darkblue;
+}
+
+div.box {
+    font-size: 15px;
+    color: white;
+}
+
+.box.green-text {
+    background-color: darkgoldenrod;
+}
+
+.green-text, .red-text {
+    margin-left: 15px;
+    border: 4px dashed darkmagenta;
+}
+
+h3, h5 {
+    font-size: 13px;
+}
+
+* {
+    font-size: 5px;
+}
