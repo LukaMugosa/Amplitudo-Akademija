@@ -1,0 +1,154 @@
+.box {
+    width: 100px;
+    height: 100px;
+    padding: 15px;
+    border: 3px solid #000;
+    background-color: #00b9ad;
+}
+
+.red {
+    background-color: red;
+    float: left;
+}
+.green {
+    background-color: green;
+    float: left;
+}
+.blue {
+    background-color: blue;
+    float: right;
+}
+
+/*.paragraph {*/
+/*    border: 3px solid #000;*/
+/*    padding: 5px;*/
+/*    margin: 6px auto;*/
+/*    width: 100%;*/
+/*}*/
+
+.wrapper {
+    background: #fff;
+    max-width: 950px;
+    margin: 5px auto;
+    padding: 20px;
+}
+
+.wrapper2 {
+    position: relative;
+}
+
+/*img {*/
+/*    float: right;*/
+/*}*/
+
+.service h2, .service p {
+    color: #999;
+    margin: 10px 0;
+    text-align: center;
+    font-size: 16px;
+}
+
+.testClear:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.service:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.service {
+    float: left;
+    background-color: #eee;
+    width: 29%;
+    margin: 1%;
+    padding: 1%;
+    height: 240px;
+    border: 1px solid #2b2828;
+    position: relative;
+    /*border-radius: 45%;*/
+}
+
+.wrapper2:nth-child(1) {
+    top: 10px;
+}
+
+
+.wrapper2:nth-child(2) {
+    top: 20px;
+}
+
+
+.wrapper2:nth-child(3) {
+    top: 30px;
+}
+
+section, aside {
+    float: left;
+    background-color: #f2f2f2;
+    width: 46%;
+    margin: 1%;
+    padding: 1%;
+}
+
+.content:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.content {
+    border: 3px solid #000;
+    position: relative;
+    margin: 15px auto;
+    left: 30px;
+    top: 20px;
+}
+
+#banner img {
+    width: 800px;
+    height: 400px;
+}
+
+#banner {
+    max-height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+#banner h2 {
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    left: 30%;
+}
+
+nav li {
+    list-style-type: none;
+    margin: 0 10px;
+    color: #fff;
+    float: right;
+}
+
+ul:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+nav {
+    background: #333;
+    padding: 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+/*#banner {*/
+/*    z-index: 5;*/
+/*}*/
