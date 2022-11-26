@@ -1,49 +1,36 @@
-const word = document.getElementById("word");
-const wrongLettersEl = document.getElementById("wrong-letters");
-const playAgainBtn = document.getElementById("play-button");
-const popup = document.querySelector(".popup-container");
+const word = document.getElementById('word');
+const wrongLettersEl = document.getElementById('wrong-letters');
+const playAgainBtn = document.getElementById('play-button');
+const popup = document.getElementById('popup-container');
 const notification = document.getElementById('notification-container');
 const finalMessage = document.getElementById('final-message');
 
-const figureParts = document.querySelectorAll(".figure-part");
+const figureParts = document.querySelectorAll('.figure-part');
+const words = ['application', 'programming', 'interface', 'wizard'];
 
-const words = ['application', 'programming',
-    'javascript', 'html', 'css', 'interface',
-    'class', 'salesforce'];
-
-const generateRandomNumber = () => {
-    return Math.floor(Math.random() * words.length);
-}
-
-let selectedWord = words[generateRandomNumber()];
-
+let selectedWord = words[Math.floor(Math.random() * words.length)];
 const correctLetters = [];
 const wrongLetters = [];
 
-
-const displayWord = () => {
+function displayWord() {
     word.innerHTML = `
-        ${selectedWord.split('').map(letter =>
-        `<span class="letter">
-            ${correctLetters.includes(letter) ? letter : ''}
-         </span>`).join('')}
+        ${selectedWord.split('').map(letter => `<span class="letter">${correctLetters.includes(letter) ? letter : ''}</span>`).join('')}
     `;
-
     const innerWord = word.innerText.replace(/\n/g, '');
-    if (innerWord === selectedWord) {
-        finalMessage.innerText = 'Congratulations. You Won! :)';
+    if(innerWord === selectedWord){
+        finalMessage.innerText = 'Congratulations! You Won! :)';
         popup.style.display = 'flex';
     }
 }
-
-const showNotification = () => {
+//keydown letter press
+function showNotification() {
     notification.classList.add('show');
 
-    setTimeout(() => {
+    setTimeout(function () {
         notification.classList.remove('show');
     }, 2000);
 }
-function updateWrongLettersElement() {
+function updateWrongLettersEl() {
     // Display wrongLetters
     wrongLettersEl.innerHTML = `
         ${wrongLetters.length > 0 ? '<p>Wrong</p>' : ''}
@@ -65,43 +52,39 @@ function updateWrongLettersElement() {
     }
 
 }
+window.addEventListener('keydown', e =>{
 
-
-window.addEventListener('keydown', (e) => {
-    if (e.keyCode >= 65 && e.keyCode <= 90) {
+    if(e.keyCode >= 65 && e.keyCode <= 90 ){
         const letter = e.key;
-        if (selectedWord.includes(letter)) {
-            if (!correctLetters.includes(letter)) {
+        if(selectedWord.includes(letter)){
+            if(!correctLetters.includes(letter)){
                 correctLetters.push(letter);
-                displayWord(); // prikazi tacno slovo
-            } else {
+                displayWord();
+            }else{
                 showNotification();
             }
-        } else {
-            if (!wrongLetters.includes(letter)) {
+        }else{
+            if(!wrongLetters.includes(letter)){
                 wrongLetters.push(letter);
-                updateWrongLettersElement();
-            } else {
+                updateWrongLettersEl();
+            }else{
                 showNotification();
             }
         }
     }
 });
 
-playAgainBtn.addEventListener('click', () => {
+//Restart game and play again
+
+playAgainBtn.addEventListener('click',() => {
+
     correctLetters.splice(0);
     wrongLetters.splice(0);
 
-    selectedWord = words[generateRandomNumber()];
-
+    selectedWord = words[Math.floor(Math.random() * words.length)];
     displayWord();
-    updateWrongLettersElement();
+    updateWrongLettersEl();
     popup.style.display = 'none';
 });
-
-window.addEventListener('click', (e) => {
-    return e.target === popup ? popup.style.display = 'none' : false;
-})
+window.addEventListener('click',(e) => e.target === popup ? popup.style.display='none' : false);
 displayWord();
-
-
